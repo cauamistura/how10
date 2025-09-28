@@ -5,6 +5,7 @@ import type { Forum } from './components/ForumList';
 import { ForumMessages } from './components/ForumMessages';
 import type { Message } from './components/ForumMessages';
 import { NewsPage } from './components/NewsPage';
+import { Header } from './components/Header';
 import { Routes, Route, useParams } from 'react-router-dom';
 import './App.css';
 
@@ -80,24 +81,36 @@ function ForumPage() {
 	const { id } = useParams();
 	const forumId = Number(id);
 	const forum = forums.find(f => f.id === forumId);
-	if (!forum) return <div style={{ padding: '2rem' }}>Fórum não encontrado.</div>;
-	return <ForumMessages forum={forum} messages={messagesByForum[forumId] || []} />;
+	if (!forum) return (
+		<>
+			<Header />
+			<div style={{ padding: '2rem' }}>Fórum não encontrado.</div>
+		</>
+	);
+	return (
+		<>
+			<Header />
+			<ForumMessages forum={forum} messages={messagesByForum[forumId] || []} />
+		</>
+	);
 }
 
 function NewsRoutePage() {
 	const { id } = useParams();
 	const newsId = Number(id);
 	const news = noticias.find(n => n.id === newsId);
-	return <NewsPage news={news} />;
+	return (
+		<>
+			<Header />
+			<NewsPage news={news} />
+		</>
+	);
 }
 
 function HomePage() {
 	return (
 		<main>
-			<header className="app-header">
-				<h1>Fórum Reforma Tributária</h1>
-				<p>Seu espaço para aprender, compartilhar e debater!</p>
-			</header>
+			<Header />
 			<NewsBoard news={noticias} />
 			<ForumList forums={forums} />
 		</main>
