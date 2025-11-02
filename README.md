@@ -4,13 +4,13 @@
 
 ## Objetivo do Projeto
 
-O How10 é um fórum online dedicado à discussão sobre a reforma tributária no Brasil. O objetivo é proporcionar um espaço colaborativo para que usuários possam compartilhar opiniões, dúvidas, notícias e informações relevantes sobre o tema, promovendo debates construtivos e o acesso a conteúdo atualizado.
+O How10 é um fórum online dedicado à discussão sobre temas de comunidade urbana e bairro. O objetivo é proporcionar um espaço colaborativo para que moradores possam compartilhar opiniões, dúvidas, notícias e informações relevantes sobre melhorias do bairro, eventos comunitários, segurança local e iniciativas ambientais, promovendo debates construtivos e o fortalecimento da vida em comunidade.
 
 ## Funcionalidades
 
-- **Fórum de mensagens:** Criação e participação em tópicos de discussão relacionados à reforma tributária.
-- **Quadro de notícias:** Exibição de notícias recentes e relevantes sobre o tema.
-- **Listagem de tópicos:** Organização dos tópicos por categorias, popularidade ou data.
+- **Fórum de mensagens:** Criação e participação em tópicos de discussão relacionados à vida comunitária do bairro.
+- **Quadro de notícias:** Exibição de notícias recentes e relevantes sobre eventos e melhorias na comunidade.
+- **Listagem de tópicos:** Organização dos tópicos por categorias como melhorias, eventos, segurança e meio ambiente.
 - **Busca e filtro:** Permite encontrar tópicos e mensagens por palavras-chave.
 - **Interface intuitiva:** Navegação simples e moderna, facilitando o acesso às informações.
 

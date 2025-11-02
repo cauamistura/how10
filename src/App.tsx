@@ -12,68 +12,68 @@ import './App.css';
 const noticias: NewsItem[] = [
 	{
 		id: 1,
-		title: 'Aprovada a Reforma Tributária no Senado',
-		content: 'O Senado aprovou o texto-base da Reforma Tributária, que promete simplificar impostos e melhorar o ambiente de negócios no Brasil.',
-		date: '30/08/2025',
-		imageUrl: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=211,fit=crop/YX4Xp5M6rzCbqQ27/1_reformatributaria-43006993-AGBbOEX6KwtE3JV3.webp',
+		title: 'Nova Praça do Bairro Vila Verde Inaugurada',
+		content: 'A prefeitura inaugurou a nova praça comunitária na Vila Verde, com playground, área de exercícios e espaço para eventos comunitários.',
+		date: '30/10/2025',
+		imageUrl: 'https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?q=80&w=375&h=211&fit=crop',
 	},
 	{
 		id: 2,
-		title: 'Principais mudanças da Reforma Tributária',
-		content: 'Entenda os pontos centrais da proposta, como a unificação de tributos e o impacto para empresas e consumidores.',
-		date: '29/08/2025',
-		imageUrl: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=211,fit=crop/YX4Xp5M6rzCbqQ27/1_reformatributaria-43006993-AGBbOEX6KwtE3JV3.webp',
+		title: 'Mutirão de Limpeza no Parque Central',
+		content: 'Moradores se organizaram para um mutirão de limpeza no Parque Central, resultando na coleta de mais de 200kg de lixo reciclável.',
+		date: '29/10/2025',
+		imageUrl: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=375&h=211&fit=crop',
 	},
 	{
 		id: 3,
-		title: 'Especialistas comentam os efeitos da Reforma',
-		content: 'Economistas e advogados analisam os benefícios e desafios da nova legislação tributária.',
-		date: '28/08/2025',
-		imageUrl: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=211,fit=crop/YX4Xp5M6rzCbqQ27/1_reformatributaria-43006993-AGBbOEX6KwtE3JV3.webp',
+		title: 'Horta Comunitária Bairro Alto Ganha Expansão',
+		content: 'A horta comunitária do Bairro Alto foi expandida e agora conta com 50 canteiros para cultivo de hortaliças pelos moradores.',
+		date: '28/10/2025',
+		imageUrl: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=375&h=211&fit=crop',
 	},
 	{
 		id: 4,
-		title: 'Reforma Tributária: o que muda para o consumidor?',
-		content: 'Veja como a reforma pode afetar os preços de produtos e serviços no dia a dia.',
-		date: '27/08/2025',
-		imageUrl: 'https://assets.zyrosite.com/cdn-cgi/image/format=auto,w=375,h=211,fit=crop/YX4Xp5M6rzCbqQ27/1_reformatributaria-43006993-AGBbOEX6KwtE3JV3.webp',
+		title: 'Feira de Artesanato Local Movimenta a Comunidade',
+		content: 'A feira mensal de artesanato local reuniu mais de 30 expositores e atraiu centenas de visitantes para o centro comunitário.',
+		date: '27/10/2025',
+		imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=375&h=211&fit=crop',
 	},
 ];
 
 const forums: Forum[] = [
 	{
 		id: 1,
-		name: 'Reforma Tributária',
-		description: 'Discussões sobre mudanças e impactos na legislação tributária.',
+		name: 'Melhorias do Bairro',
+		description: 'Discussões sobre projetos e melhorias necessárias na infraestrutura local.',
 	},
 	{
 		id: 2,
-		name: 'Imposto de Renda',
-		description: 'Tire dúvidas e compartilhe experiências sobre IRPF e IRPJ.',
+		name: 'Eventos Comunitários',
+		description: 'Organize e participe de eventos, festas e atividades da comunidade.',
 	},
 	{
 		id: 3,
-		name: 'Simples Nacional',
-		description: 'Debates e novidades para micro e pequenas empresas.',
+		name: 'Segurança no Bairro',
+		description: 'Debates sobre segurança, iluminação pública e ações preventivas.',
 	},
 	{
 		id: 4,
-		name: 'Contabilidade Digital',
-		description: 'Tecnologia, automação e tendências na área contábil.',
+		name: 'Meio Ambiente Local',
+		description: 'Iniciativas verdes, reciclagem e preservação ambiental no bairro.',
 	},
 ];
 
 const messagesByForum: Record<number, Message[]> = {
 	1: [
-		{ id: 1, author: 'João', content: 'O que muda na reforma?', date: 'Hoje' },
-		{ id: 2, author: 'Maria', content: 'A reforma vai impactar pequenas empresas?', date: 'Hoje' },
+		{ id: 1, author: 'João', content: 'Precisamos de mais iluminação na Rua das Flores', date: 'Hoje' },
+		{ id: 2, author: 'Maria', content: 'Que tal organizarmos um mutirão para arrumar a praça?', date: 'Hoje' },
 	],
 	2: [
-		{ id: 1, author: 'Carlos', content: 'Como declarar dependentes?', date: 'Hoje' },
+		{ id: 1, author: 'Carlos', content: 'Alguém quer ajudar na festa junina do bairro?', date: 'Hoje' },
 	],
 	3: [],
 	4: [
-		{ id: 1, author: 'Ana', content: 'Quais softwares vocês usam?', date: 'Hoje' },
+		{ id: 1, author: 'Ana', content: 'Vamos começar um projeto de compostagem comunitária?', date: 'Hoje' },
 	],
 };
 
