@@ -1,0 +1,258 @@
+.work-details {
+  min-height: calc(100vh - 80px);
+  background: #f8fafc;
+  padding: 2rem 0;
+}
+
+.work-details-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.work-details-header {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.work-title-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.work-details h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #2d3748;
+  flex: 1;
+}
+
+.work-status-badge {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  white-space: nowrap;
+}
+
+.work-location {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #718096;
+}
+
+.work-progress-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.work-progress-section h3 {
+  margin: 0 0 1.5rem 0;
+  font-size: 1.5rem;
+  color: #2d3748;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.progress-bar-large {
+  flex: 1;
+  background: #e2e8f0;
+  border-radius: 12px;
+  height: 16px;
+  overflow: hidden;
+}
+
+.progress-fill-large {
+  height: 100%;
+  border-radius: 12px;
+  transition: width 0.5s ease;
+}
+
+.progress-percentage {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  min-width: 60px;
+}
+
+.work-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.info-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.info-card h4 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+  color: #718096;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.info-card p {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.work-description-section {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.work-description-section h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.5rem;
+  color: #2d3748;
+}
+
+.work-description-text {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.work-timeline {
+  background: #fff;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.work-timeline h3 {
+  margin: 0 0 2rem 0;
+  font-size: 1.5rem;
+  color: #2d3748;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 80px;
+  top: 2.5rem;
+  width: 2px;
+  height: calc(100% + 1rem);
+  background: #e2e8f0;
+}
+
+.timeline-item.future {
+  opacity: 0.6;
+}
+
+.timeline-date {
+  min-width: 80px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #718096;
+  text-align: center;
+  position: relative;
+}
+
+.timeline-date::after {
+  content: '';
+  position: absolute;
+  right: -12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  background: #3182ce;
+  border-radius: 50%;
+}
+
+.timeline-item.future .timeline-date::after {
+  background: #e2e8f0;
+}
+
+.timeline-content {
+  flex: 1;
+}
+
+.timeline-content strong {
+  display: block;
+  font-size: 1.1rem;
+  color: #2d3748;
+  margin-bottom: 0.25rem;
+}
+
+.timeline-content p {
+  margin: 0;
+  color: #4a5568;
+  font-size: 0.95rem;
+}
+
+.work-not-found {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #718096;
+}
+
+.work-not-found h2 {
+  margin-bottom: 1rem;
+  color: #4a5568;
+}
+
+@media (max-width: 768px) {
+  .work-title-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .progress-container {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+  }
+  
+  .progress-percentage {
+    text-align: center;
+    min-width: auto;
+  }
+  
+  .timeline-item {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .timeline-item::after {
+    display: none;
+  }
+  
+  .timeline-date::after {
+    display: none;
+  }
+}

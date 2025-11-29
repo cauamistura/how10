@@ -6,6 +6,9 @@ import { ForumMessages } from './components/ForumMessages';
 import type { Message } from './components/ForumMessages';
 import { NewsPage } from './components/NewsPage';
 import { Header } from './components/Header';
+import { WorksList } from './components/WorksList';
+import type { Work } from './components/WorksList';
+import { WorkDetails } from './components/WorkDetails';
 import { Routes, Route, useParams } from 'react-router-dom';
 import './App.css';
 
@@ -63,6 +66,59 @@ const forums: Forum[] = [
 	},
 ];
 
+const obras: Work[] = [
+	{
+		id: 1,
+		name: 'Revitalização da Praça Central',
+		description: 'Reforma completa da praça com novos bancos, iluminação LED, playground modernizado e área de exercícios. Inclui também paisagismo com plantas nativas e sistema de irrigação sustentável.',
+		status: 'em-andamento',
+		progress: 65,
+		startDate: '15/09/2025',
+		estimatedEndDate: '20/12/2025',
+		location: 'Praça Central - Centro',
+	},
+	{
+		id: 2,
+		name: 'Construção de Ciclovia Vila Verde',
+		description: 'Nova ciclovia ligando o bairro Vila Verde ao centro da cidade, com 3.2km de extensão, sinalização completa e pontos de parada com bicicletários.',
+		status: 'em-andamento',
+		progress: 40,
+		startDate: '01/10/2025',
+		estimatedEndDate: '15/02/2026',
+		location: 'Av. Vila Verde - Trecho Centro',
+	},
+	{
+		id: 3,
+		name: 'Ampliação do Centro de Saúde',
+		description: 'Expansão do centro de saúde local com 4 novos consultórios, sala de vacinação ampliada e área de espera climatizada para melhor atendimento aos moradores.',
+		status: 'pausada',
+		progress: 25,
+		startDate: '20/08/2025',
+		estimatedEndDate: '30/01/2026',
+		location: 'Rua da Saúde, 123',
+	},
+	{
+		id: 4,
+		name: 'Pavimentação Rua das Flores',
+		description: 'Pavimentação asfáltica completa da Rua das Flores, incluindo calçadas, meio-fio, drenagem pluvial e sinalização horizontal.',
+		status: 'concluida',
+		progress: 100,
+		startDate: '10/07/2025',
+		estimatedEndDate: '25/08/2025',
+		location: 'Rua das Flores - Bairro Alto',
+	},
+	{
+		id: 5,
+		name: 'Nova Escola Municipal',
+		description: 'Construção de escola municipal com 8 salas de aula, biblioteca, quadra poliesportiva, laboratório de informática e refeitório. Capacidade para 400 alunos.',
+		status: 'planejada',
+		progress: 5,
+		startDate: '05/01/2026',
+		estimatedEndDate: '20/12/2026',
+		location: 'Terreno Av. Educação s/n',
+	},
+];
+
 const messagesByForum: Record<number, Message[]> = {
 	1: [
 		{ id: 1, author: 'João', content: 'Precisamos de mais iluminação na Rua das Flores', date: 'Hoje' },
@@ -95,6 +151,18 @@ function ForumPage() {
 	);
 }
 
+function WorkPage() {
+	const { id } = useParams();
+	const workId = Number(id);
+	const work = obras.find(w => w.id === workId);
+	return (
+		<>
+			<Header />
+			<WorkDetails work={work} />
+		</>
+	);
+}
+
 function NewsRoutePage() {
 	const { id } = useParams();
 	const newsId = Number(id);
@@ -113,6 +181,7 @@ function HomePage() {
 			<Header />
 			<NewsBoard news={noticias} />
 			<ForumList forums={forums} />
+			<WorksList works={obras} />
 		</main>
 	);
 }
@@ -122,6 +191,7 @@ function App() {
 		<Routes>
 			<Route path="/" element={<HomePage />} />
 			<Route path="/forum/:id" element={<ForumPage />} />
+			<Route path="/obra/:id" element={<WorkPage />} />
 			<Route path="/noticia/:id" element={<NewsRoutePage />} />
 		</Routes>
 	);
